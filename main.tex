@@ -1,0 +1,64 @@
+\documentclass{gjor-iuss-thesis-class}
+
+% ============================================================
+%  THESIS METADATA
+% ============================================================
+\thesissetup{
+  title           = {Performance-Based Seismic Assessment and Retrofit of Existing RC Frame Buildings in Italy},
+  author          = {Gerard J. O'Reilly},
+  year            = {2016},
+  submissionmonth = {December 2016},
+  degree          = {earthquake engineering and engineering seismology},
+  institution     = {Scuola Universitaria Superiore IUSS Pavia},
+  logo            = {frontmatter/IUSS_logo.png},
+  pdfkeywords     = {PhD thesis, earthquake engineering, seismic assessment},
+}
+
+% ============================================================
+%  SUPERVISORS
+% ============================================================
+\AddAdvisor{Prof. Timothy J. Sullivan}{University of Canterbury, New Zealand}
+\AddAdvisor{Prof. Gian Michele Calvi}{IUSS Pavia, Italy}
+
+% ============================================================
+%  BIBLIOGRAPHY & GLOSSARY SOURCES
+% ============================================================
+\addbibresource{references.bib}
+\input{abbreviations_and_symbols}
+
+% ============================================================
+%  DOCUMENT
+% ============================================================
+\begin{document}
+
+\makefrontmatter
+
+% ------------------------------------------------------------
+%  CHAPTERS
+%  Use \addchapter{Title}{file} to include a student article.
+%  The article's \maketitle, \makeabstract, \linenumbers etc.
+%  are automatically suppressed – no edits to the article needed.
+%
+%  Use \input{file} for chapters written natively for the thesis.
+% ------------------------------------------------------------
+
+\addchapter{Introduction and Motivation}{chapter_1}
+\addchapter{Ground Motion Selection and Scaling}{chapter_2}
+
+% Native thesis chapter (no article wrapper needed):
+% \input{chapter_3}
+
+\makebackmatter
+
+% ------------------------------------------------------------
+%  APPENDICES  (optional)
+% ------------------------------------------------------------
+% \newcommand{\AppendixATitle}{Appendix A. Influence of database subset selection}
+% \@oldchapter*{\AppendixATitle}
+% \addcontentsline{toc}{chapter}{\AppendixATitle}
+% \markboth{\AppendixATitle}{}
+% \label{Appendix A}
+% \renewcommand{\thefigure}{A.\arabic{figure}}
+% \input{appendix_a}
+
+\end{document}

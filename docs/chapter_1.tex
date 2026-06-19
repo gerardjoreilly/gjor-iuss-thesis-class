@@ -1,0 +1,80 @@
+\chapter{Guidelines for the PhD thesis}
+\label{chapter:guidelines}
+
+This chapter is extensively based on the following publication:\\
+\\
+\fullcite{Aristeidou2023}
+
+% NOTE: Acronyms are defined only in abstract, introduction and conclusions chapters.
+
+\section{Introduction}
+
+Please read carefully the instructions presented herein for the format of a PhD thesis at IUSS Pavia. This document was written to be loosely based on the required format, therefore please read the document for any formatting requirements that are not explicitly stated in the text. Any formatting styles not described herein are either coded in the preamble, or are left to the author's discretion.
+
+\section{General settings}
+
+The page setup options are in the preamble of ``\texttt{main.tex}" file and described in the following. The margins for A4 size paper should be fixed as: top 6cm, bottom 4.7cm, inside 4cm and outside 3.5cm. The page margins should be mirrored. New chapters should start on odd page numbers and the headers are different on odd and even pages. The header and footer should be set at 4.8cm and 1.5cm from edge, respectively. It must be ensured that first page of each chapter is located on the right-hand side of the double-sided document.
+
+\section{Formatting and styling}
+
+The formatting settings are already implemented in the LaTex files. Nevertheless, they are also summarised along the text herein. All the styles are set in the preamble.
+
+\subsection{The body text}
+
+The language of the main text should be set to English (United Kingdom). Abbreviations are allowed but should be spelt out in full when first used in the abstract, introduction, and conclusions chapters. Integers from one to ten should be written out in words. Foreign language phrases should be italicised (e.g., Latin, French).
+
+\subsection{Header and page numbering}
+
+The header should vary for the first, odd and even pages: there should be no header on the first page of each section/chapter, on even pages the title of the chapter should be inserted (it is automatically reported if added in the first page of the chapter), whilst the name of the author should be placed on the header of odd pages. The text size of headers and page numbers is ``\textbackslash small". Page numbers should be flush outside on odd pages and flush inside on even pages. The preliminary pages of the thesis from the Abstract to the last page of the Nomenclature should be numbered using Roman numerals (i.e. i, ii, iii).  The page numbers should restart using Arabic numbers (i.e. 1, 2, 3) on the first page of Chapter \ref{chapter:guidelines} and should continue until the last page of the report/thesis.
+
+It is worth mentioning that the user can modify the font style of the document and the template will be completely updated.
+
+\subsection{Equations, figures and tables}
+
+Equations should be centred within the text width, whilst equation numbers should be placed in parentheses and set flush with the right margin, as illustrated in Equations \ref{median_GCIM} and \ref{sigma_GCIM}.
+
+\begin{equation}
+	\mu_{\ln \text{IM}_\text{i} | \ln \text{IM*}, \text{rup}} = \mu_{\ln \text{IM}_\text{i} | \text{rup}} + \sigma_{\ln \text{IM}_\text{i} | \text{rup}} \cdot \rho_{\ln \text{IM}_i, \ln \text{IM*}} \cdot \epsilon_{\ln \text{IM*}}
+	\label{median_GCIM}
+\end{equation}
+
+\begin{equation}
+	\sigma_{\ln \text{IM}_\text{i} | \ln \text{IM*}, \text{rup}} = \sigma_{\ln \text{IM}_\text{i} | \text{rup}} \cdot \sqrt{1 - \rho_{\ln \text{IM}_\text{i}, \ln \text{IM*}}^2}
+	\label{sigma_GCIM}
+\end{equation}
+
+In equations, the text, variables and functions should be in \textit{Italic}, whilst numbers, functions and subscripts should not. The sequence of braces, brackets, and parentheses in equations should generally be $\{[( )]\}$, with due consideration given to the specific meanings associated with different types of brackets.
+
+Figures should be included in the report as illustrated in Figure \ref{IUSS_logo}; there should be 3pt space before and 6pt space after each figure. A caption should be inserted using the pre-defined format in the preamble. The captions of figures should be centred.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures_ch1/IUSS_logo.png}
+	\caption{Example figure}
+	\label{IUSS_logo}
+\end{figure}
+
+Tables should have the format shown in Table \ref{tab:modal_analysis}. The captions of tables should be centre-aligned and justified (as in Table \ref{tab:modal_analysis}). Titles of the cells should be in bold font, and for the contents a smaller font size may be used (e.g., ``\textbackslash small").
+
+\begin{table}
+	\centering
+	\caption{Modal analysis results of the case study bridge.}
+	\begin{tabularx}{\textwidth}{ccXXXXXX}
+		\hline
+		& & \multicolumn{6}{c}{\textbf{Modal participation mass ratios [\%]}} \\ \cline{3-8}
+		\textbf{Mode} & \textbf{Period [sec]} & $\bm{U_x}$ & $\bm{U_y}$ & $\bm{U_z}$ & $\bm{\Phi_x}$ & $\bm{\Phi_y}$ & $\bm{\Phi_z}$ \\ \hline
+		1 & 0.604 & 48.5 & 0 & 0 & 0 & 31.1 & 0 \\
+		2 & 0.363 & 50.5 & 0 & 0 & 0 & 34.6 & 0 \\
+		3 & 0.352 & 0 & 88.3 & 0 & 0.5 & 0 & 0 \\
+		4 & 0.336 & 0 & 0 & 75.4 & 0 & 0 & 0 \\ \hline
+	\end{tabularx}
+	\label{tab:modal_analysis}
+\end{table}
+
+\subsection{References}
+
+All references should be cited in the text by name and year and may take one of the following forms: ``…as shown by \textcite{Tarbali2019}, the…" or ``…has often been demonstrated \parencite{Davalos2020b, Davalos2019, Aristeidou2024a} that…" The reference list should be placed at the end of the thesis, but before the appendices (if any), and must be in alphabetical order by first authors' surnames and presented in the style shown in the examples in the reference section of these guidelines.
+
+\subsection{Appendices}
+
+Any appendices included in the document should be numbered alphabetically and placed at the end of the thesis after the references (see example at the end of this document).
