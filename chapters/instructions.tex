@@ -1,0 +1,136 @@
+\chapter{Template Instructions}
+
+This document is a template for the preparation of a PhD thesis at the Scuola Universitaria Superiore IUSS Pavia. It is intended to be used as a starting point for the preparation of the thesis, and provides a consistent structure and formatting that is compatible with the IUSS guidelines.
+
+\section{Getting started}
+
+\subsection{Class file}
+
+The thesis is built on the \texttt{gjor-iuss-thesis-class} class file. \textbf{Do not copy-paste the class file into your Overleaf project.} Instead, reference the source file directly from the repository at:
+
+\begin{center}
+  \url{https://github.com/gerardjoreilly/gjor-iuss-thesis-class/blob/main/gjor-iuss-thesis-class.cls}
+\end{center}
+
+Keeping a live reference to the source means that any bug fixes or improvements made centrally are automatically available to all users on their next update. To use the class, place the \texttt{gjor-iuss-thesis-class.cls} file in the root of your project (downloaded or linked from the repository) and keep it up to date.
+
+\subsection{Folder structure}
+
+Copy the following folder structure to your own local project and maintain it throughout:
+
+\begin{itemize}
+  \item \texttt{chapters/} — one \texttt{.tex} file per chapter of the thesis
+  \item \texttt{appendices/} — one \texttt{.tex} file per appendix
+  \item \texttt{figs/} — all figures, organised into subfolders if desired (e.g.\ \texttt{figs/ch1/}, \texttt{figs/ch2/})
+  \item \texttt{docs/} — supporting documents: \texttt{abstract.tex}, \texttt{sommario.tex}, \texttt{acknowledgements.tex} (optional), \texttt{acronyms.tex}, \texttt{references.bib}, and the IUSS logo
+\end{itemize}
+
+All figures should be referenced relative to \texttt{figs/} (e.g.\ \verb|\includegraphics{ch1/myfig.pdf}|), since \verb|\graphicspath{{figs/}}| is set globally by the class.
+
+
+\section{Configuring the thesis}
+
+The thesis metadata is set in the preamble of \texttt{main.tex} via \verb|\thesissetup|:
+
+\begin{verbatim}
+\thesissetup{
+  title           = {Full Thesis Title},
+  author          = {Name Surname},
+  year            = {2026},
+  submissionmonth = {June 2026},
+  degree          = {earthquake engineering and engineering seismology},
+  institution     = {Scuola Universitaria Superiore IUSS Pavia},
+  linenos         = false,
+  outputname      = {Surname-PhD-Thesis},
+  pdfkeywords     = {keyword1, keyword2},
+}
+\end{verbatim}
+
+\noindent The \texttt{degree} field should be one of:
+\begin{itemize}
+  \item \texttt{earthquake engineering and engineering seismology} if you are a UME student
+  \item \texttt{earthquake engineering} if you are a ROSE student
+\end{itemize}
+
+\noindent The \texttt{linenos} key enables continuous line numbering throughout the document (\texttt{true} or \texttt{false}), which is useful when sharing drafts for review. 
+
+\subsection{Supervisors}
+
+Supervisors are declared with \verb|\AddAdvisor{Name}{Affiliation}| before \verb|\begin{document}|. Add one line per supervisor:
+
+\begin{verbatim}
+\AddAdvisor{Prof. Name Surname}{University, Country}
+\AddAdvisor{Prof. Name Surname}{University, Country}
+\end{verbatim}
+
+
+\section{Adding chapters}
+
+Each chapter lives in its own file inside \texttt{chapters/}. Include it in \texttt{main.tex} with:
+
+\begin{verbatim}
+\input{chapters/chapter_filename}
+\end{verbatim}
+
+Each chapter file must begin with a \verb|\chapter{Title}| command. The front matter (title page, abstract, table of contents, nomenclature, etc.) is generated automatically by \verb|\makefrontmatter| and should not be replicated manually.
+
+\subsection{Converting from \texttt{gjor-article-class-review}}
+
+If you already use \texttt{gjor-article-class-review} for your papers, those files can be converted to thesis chapters with minimal changes:
+
+\begin{enumerate}
+  \item Remove the article preamble (\verb|\documentclass|, \verb|\usepackage|, \verb|\title|, \verb|\author|, \verb|\affil|, \verb|\begin{document}|, \verb|\maketitle|, \verb|\makeabstract|, \verb|\end{document}|, etc.).
+  \item Change the first \verb|\section{...}| of the Introduction to \verb|\chapter{...}|\ and remove \verb|\section| numbering resets if any.
+  \item Add a \verb|\bibentry{citekey}| line immediately after the \verb|\chapter{...}| heading to cite the published paper:
+\begin{verbatim}
+\chapter{Title of the Chapter}
+The work presented in this chapter has been published in:
+\bibentry{AuthorYear-key}
+\end{verbatim}
+  \item Move all figure files to \texttt{figs/} (or a subfolder within it) and update paths accordingly.
+  \item Move any new \verb|\DeclareAcronym| definitions to \texttt{docs/acronyms.tex} — do not redefine acronyms already declared there.
+  \item Move any new bibliography entries to \texttt{docs/references.bib} — check for duplicates.
+\end{enumerate}
+
+The class automatically suppresses article-only commands (\verb|\maketitle|, \verb|\makeabstract|, \verb|\affil|, etc.) when a file is included through \verb|\addchapter| or \verb|\addappendix|, but a plain \verb|\input| does not suppress them, so the preamble must be removed manually.
+
+
+\section{Acronyms and nomenclature}
+
+All acronyms and symbols are defined centrally in \texttt{docs/acronyms.tex} using the \texttt{acro} package:
+
+\begin{verbatim}
+\DeclareAcronym{PGA}{
+  short = PGA ,
+  long  = peak ground acceleration ,
+}
+\end{verbatim}
+
+Use \verb|\ac{PGA}| for the first occurrence (prints full name with abbreviation) and subsequent uses (prints abbreviation only), \verb|\acp{PGA}| for the plural form. The Nomenclature section at the front of the thesis is generated automatically from all declared acronyms.
+
+New acronyms should always be added to the central file rather than defined locally in a chapter. If a chapter file was previously standalone and contains its own \verb|\DeclareAcronym| calls, those are automatically suppressed when included in the thesis to avoid redefinition errors.
+
+
+\section{Bibliography}
+
+All references are stored in a single \texttt{.bib} file at \texttt{docs/references.bib}. The bibliography style and source are declared in \texttt{main.tex}:
+
+\begin{verbatim}
+\bibliographystyle{unsrtnat}
+\bibliography{docs/references}
+\end{verbatim}
+
+Use \verb|\citep{key}| for parenthetical citations and \verb|\citet{key}| for text citations (e.g.\ \citet{Suzuki2020} showed that \ldots). When converting chapters from standalone papers, merge all \texttt{.bib} entries into \texttt{docs/references.bib} and check for duplicate keys or conflicting entries.
+
+
+\section{Appendices}
+
+Appendices are placed in the \texttt{appendices/} folder and included after the bibliography with:
+
+\begin{verbatim}
+\addappendix{Title of Appendix A}{appendix_a}
+\addappendix{Title of Appendix B}{appendix_b}
+\end{verbatim}
+
+Appendix files must \textbf{not} begin with a \verb|\chapter{...}| command — the heading is created by \verb|\addappendix|. The \verb|\appendix| switch (letter numbering, ``Appendix'' label) is triggered automatically on the first call. Figures, tables and equations are numbered A.1, A.2, B.1, etc.\ automatically.
+
