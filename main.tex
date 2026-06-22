@@ -4,61 +4,54 @@
 %  THESIS METADATA
 % ============================================================
 \thesissetup{
-  title           = {Performance-Based Seismic Assessment and Retrofit of Existing RC Frame Buildings in Italy},
-  author          = {Gerard J. O'Reilly},
-  year            = {2016},
-  submissionmonth = {December 2016},
-  degree          = {earthquake engineering and engineering seismology},
-  institution     = {Scuola Universitaria Superiore IUSS Pavia},
-  logo            = {frontmatter/IUSS_logo.png},
-  pdfkeywords     = {PhD thesis, earthquake engineering, seismic assessment},
+  title           = {Title for the thesis template},
+  author          = {Name Surname},
+  year            = {Year},
+  submissionmonth = {Month Year},
+  degree          = {earthquake engineering and engineering seismology}, % or earthquake engineering
+  institution     = {Scuola Universitaria Superiore IUSS Pavia}, % Leave this as is
+  linenos         = false,   % true to enable or false to disable
+  outputname      = {gjor-iuss-thesis-class-template},   % ← desired PDF filename (no .pdf)
+  pdfkeywords     = {keyword1, keyword2, keyword3},
 }
 
 % ============================================================
 %  SUPERVISORS
 % ============================================================
-\AddAdvisor{Prof. Timothy J. Sullivan}{University of Canterbury, New Zealand}
-\AddAdvisor{Prof. Gian Michele Calvi}{IUSS Pavia, Italy}
-
-% ============================================================
-%  BIBLIOGRAPHY & GLOSSARY SOURCES
-% ============================================================
-\addbibresource{references.bib}
-\input{abbreviations_and_symbols}
+\AddAdvisor{Prof. Name1 Surname1}{University of Somewhere, Country}
+\AddAdvisor{Prof. Name2 Surname2}{University of Anywhere, Country}
+% To add or remove advisor names and affiliation, just add or remove these commands
 
 % ============================================================
 %  DOCUMENT
 % ============================================================
+\input{docs/acronyms}
 \begin{document}
-
 \makefrontmatter
 
-% ------------------------------------------------------------
+% ============================================================
 %  CHAPTERS
-%  Use \addchapter{Title}{file} to include a student article.
-%  The article's \maketitle, \makeabstract, \linenumbers etc.
-%  are automatically suppressed – no edits to the article needed.
-%
-%  Use \input{file} for chapters written natively for the thesis.
-% ------------------------------------------------------------
+% ============================================================
+% Here you just input all relevant documents that comprise the chapters of the thesis
+% When transferring and creating chapters:
+%   - Create a document with a \chapter{title} at the beginning
+%   - Ensure all figures are in the filder with the correct file path name in figs/
+%   - Ensure all acronyms used have been defined and added to the central thesis docs/acronyms.tex file
+%   - Ensure all references used have been added to the docs/references.bib file. Check for double entries and conflicts
 
-\addchapter{Introduction and Motivation}{chapter_1}
-\addchapter{Ground Motion Selection and Scaling}{chapter_2}
+\input{chapters/paper1}
+\input{chapters/paper1}
 
-% Native thesis chapter (no article wrapper needed):
-% \input{chapter_3}
+% ============================================================
+%  REFERENCES
+% ============================================================
+\bibliographystyle{unsrtnat}
+\bibliography{docs/references}
 
-\makebackmatter
-
-% ------------------------------------------------------------
+% ============================================================
 %  APPENDICES  (optional)
-% ------------------------------------------------------------
-% \newcommand{\AppendixATitle}{Appendix A. Influence of database subset selection}
-% \@oldchapter*{\AppendixATitle}
-% \addcontentsline{toc}{chapter}{\AppendixATitle}
-% \markboth{\AppendixATitle}{}
-% \label{Appendix A}
-% \renewcommand{\thefigure}{A.\arabic{figure}}
-% \input{appendix_a}
+% ============================================================
+% Place these documents without any \chapter{title} at the beginning in the appendices/ folder
+\addappendix{This is the title of the appendix}{appendix_a}
 
 \end{document}

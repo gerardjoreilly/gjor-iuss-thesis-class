@@ -21,8 +21,7 @@
 \newcommand{\ThesisSubmissionMonth}{Month Year}
 \newcommand{\DegreeTitle}{earthquake engineering and engineering seismology}
 \newcommand{\ThesisInstitution}{Scuola Universitaria Superiore IUSS Pavia}
-\newcommand{\ThesisLogo}{frontmatter/IUSS_logo.png}
-\newcommand{\ThesisPDFKeywords}{PhD thesis}
+\newcommand{\ThesisPDFKeywords}{PhD Thesis}
 
 \define@key{thesis}{title}          {\renewcommand{\ThesisTitle}{#1}}
 \define@key{thesis}{author}         {\renewcommand{\ThesisAuthor}{#1}}
@@ -30,10 +29,22 @@
 \define@key{thesis}{submissionmonth}{\renewcommand{\ThesisSubmissionMonth}{#1}}
 \define@key{thesis}{degree}         {\renewcommand{\DegreeTitle}{#1}}
 \define@key{thesis}{institution}    {\renewcommand{\ThesisInstitution}{#1}}
-\define@key{thesis}{logo}           {\renewcommand{\ThesisLogo}{#1}}
 \define@key{thesis}{pdfkeywords}    {\renewcommand{\ThesisPDFKeywords}{#1}}
+\define@key{thesis}{linenos}        {\csname @thesislinenos#1\endcsname}
+\define@key{thesis}{outputname}     {\renewcommand{\ThesisOutputName}{#1}}
 
 \newcommand{\thesissetup}[1]{\setkeys{thesis}{#1}}
+
+\newcommand{\ThesisOutputName}{}
+% Write the desired PDF name to <jobname>.outputname so latexmkrc can copy it
+\AtBeginDocument{%
+  \ifx\ThesisOutputName\empty\else
+    \newwrite\@thesis@outfile
+    \immediate\openout\@thesis@outfile=\jobname.outputname
+    \immediate\write\@thesis@outfile{\ThesisOutputName}%
+    \immediate\closeout\@thesis@outfile
+  \fi
+}
 
 
 % ============================================================
@@ -56,7 +67,7 @@
 \newcommand{\PrintAdvisors}{%
   \ifnum\value{advisorcount}>1 Supervisors:\else Supervisor:\fi
   \\[0.3cm]
-  \doublespacing
+  \onehalfspacing
   \advisorlist
 }
 
@@ -68,6 +79,7 @@
 \RequirePackage{amsmath,amssymb,bm}
 \RequirePackage{upgreek}
 \RequirePackage{gensymb}
+\RequirePackage{lipsum}     % For inserting dummy text
 
 
 % ============================================================
@@ -139,10 +151,10 @@
 % Main body style
 \fancypagestyle{mainmatter}{%
   \fancyhf{}
-  \fancyhead[RE]{\small\nouppercase{\leftmark}}
   \fancyhead[RO]{\small\thepage}
-  \fancyhead[LO]{\small\ThesisAuthor}
   \fancyhead[LE]{\small\thepage}
+  % \fancyhead[CE]{\small\ThesisTitle} % Comented out because if the title is too long, it breaks and looks bad
+  \fancyhead[CO]{\small\ThesisAuthor}
 }
 
 % Heading formats – matched to gjor-article-class-review
@@ -180,42 +192,8 @@
 
 
 % ============================================================
-%  CHAPTER FROM STUDENT ARTICLE  –– \addchapter{Title}{file}
-%
-%  Neutralises article-only commands so a student can paste
-%  their gjor-article-class-review source in as a chapter
-%  without any surgery on their file.
-% ============================================================
-\newcommand{\addchapter}[2]{%
-  \@oldchapter{#1}%
-  \thispagestyle{plain}%
-  \begingroup
-    % Silence article-preamble commands that must not fire in thesis
-    \renewcommand{\maketitle}{}%
-    \renewcommand{\makeabstract}{}%
-    % \title, \author, \affil etc. collect into boxes but never print
-    \renewcommand{\title}[1]{}%
-    \renewcommand{\author}[1]{}%
-    \providecommand{\affil}[2][]{}%
-    \renewcommand{\affil}[2][]{}%
-    \providecommand{\corrauthor}{}%
-    % Kill line numbers if the article had \linenumbers
-    \providecommand{\linenumbers}{}%
-    \renewcommand{\linenumbers}{}%
-    \providecommand{\nolinenumbers}{}%
-    \renewcommand{\nolinenumbers}{}%
-    % acro package: \input{docs/acronyms} inside the article will
-    % try to re-declare acronyms already defined – make it a no-op
-    \let\DeclareAcronym\@gobble
-    \input{#2}%
-  \endgroup
-}
-
-
-% ============================================================
 %  BLANK-PAGE SUPPRESSION
 % ============================================================
-\makeatletter
 \renewcommand{\cleardoublepage}{%
   \clearpage
   \ifodd\c@page\else
@@ -224,8 +202,6 @@
     \newpage
   \fi
 }
-\makeatother
-
 
 % ============================================================
 %  TABLE OF CONTENTS
@@ -279,34 +255,73 @@
 % ============================================================
 %  BIBLIOGRAPHY
 % ============================================================
-\RequirePackage{csquotes}
-\RequirePackage[
-  backend       = biber,
-  style         = apa,
-  sorting       = ynt,
-  sortcites     = true,
-  apamaxprtauth = 999,
-  uniquename    = false,
-]{biblatex}
-
+\RequirePackage[numbers]{natbib}
+\renewcommand{\bibsep}{0pt}
+\RequirePackage{bibentry}
+\nobibliography*
+% natbib's \bibsection calls \chapter* which the class's \chapter redefinition
+% breaks (it expects one mandatory arg, eating the *). Override to use
+% \unnumberedchapter which correctly calls \@oldchapter*.
+\AtBeginDocument{%
+  \renewcommand{\bibsection}{%
+    \unnumberedchapter{\bibname}%
+  }%
+}
 
 % ============================================================
 %  LISTS
 % ============================================================
 \RequirePackage{enumitem}
 
-
 % ============================================================
-%  GLOSSARIES & NOMENCLATURE
+%  ABBREVIATIONS & ACRONYMS
 % ============================================================
-\RequirePackage[toc,acronym]{glossaries}
-\makeglossaries
-
+\RequirePackage{acro}
+\acsetup{
+  list / display  = all ,
+  list / template = longtable ,
+}
+\acsetup{templates/colspec = {l@{\hspace{1.5em}}p{.8\linewidth}}}
 
 % ============================================================
 %  ARRAY STRETCH
 % ============================================================
 \renewcommand{\arraystretch}{1.2}
+
+
+% ============================================================
+%  LINE NUMBERS  –– enable with  linenos = true  in \thesissetup
+% ============================================================
+\RequirePackage{lineno}
+\newif\if@thesislinenos
+\@thesislinenosfalse
+\AtBeginDocument{\if@thesislinenos\linenumbers\fi}
+
+
+% ============================================================
+%  APPENDIX  –– \addappendix{Title}{file}
+%
+%  On the first call: triggers \appendix (switches chapter counter
+%  to letters and \chaptertitlename to "Appendix"), then ties the
+%  figure/table/equation counters to the chapter so they read
+%  A.1, A.2, etc.  Subsequent calls just open the next appendix.
+%  Files are read from appendices/<file>.tex.
+% ============================================================
+\newif\if@appendixstarted
+\@appendixstartedfalse
+
+\newcommand{\addappendix}[2]{%
+  \if@appendixstarted\else
+    \appendix
+    \counterwithin{figure}{chapter}%
+    \counterwithin{table}{chapter}%
+    \counterwithin{equation}{chapter}%
+    \@appendixstartedtrue
+  \fi
+  \@oldchapter{#1}%
+  \thispagestyle{plain}%
+  \input{appendices/#2}%
+}
 
 
 % ============================================================
@@ -316,16 +331,15 @@
   %--- Title page -------------------------------------------
   \begin{titlepage}
     \centering
-    \includegraphics[width=0.8\textwidth]{\ThesisLogo}\par
-    \vspace{0.5cm}
+    \includegraphics[width=0.6\textwidth]{figs/logo-iuss.pdf}\par
+    \vspace{0cm}
     {\textbf{\ThesisInstitution}\par}
     \vspace{1cm}
     {\setstretch{1.3}\LARGE\bfseries \ThesisTitle \par}
     \vspace{1cm}
     {\setstretch{1.2}\large
-      A Thesis Submitted in Partial Fulfilment\\
-      of the Requirements for the Degree of\\
-      Doctor of Philosophy in\par}
+      A Thesis Submitted in Partial Fulfilment of the Requirements\\
+      for the Degree of Doctor of Philosophy in\par}
     \vspace{0.7cm}
     {\setstretch{1.3}\large\bfseries \MakeUppercase{\DegreeTitle}\par}
     \vspace{0.7cm}
@@ -343,16 +357,17 @@
   \pagestyle{plain}
   %--- Abstract ---------------------------------------------
   \unnumberedchapter{Abstract}
-  \input{frontmatter/abstract}
+  \input{docs/abstract}
   %--- Italian abstract -------------------------------------
   \unnumberedchapter{Sommario}
-  \input{frontmatter/sommario}
-  %--- Acknowledgements -------------------------------------
-  \unnumberedchapter{Acknowledgements}
-  \input{frontmatter/acknowledgements}
-  \cleardoublepage
+  \input{docs/sommario}
+  %--- Acknowledgements (optional) --------------------------
+  \IfFileExists{docs/acknowledgements.tex}{%
+    \unnumberedchapter{Acknowledgements}%
+    \input{docs/acknowledgements}%
+    \cleardoublepage
+  }{}
   %--- ToC / LoF / LoT --------------------------------------
-  \glsunsetall
   \phantomsection
   \addcontentsline{toc}{chapter}{Contents}
   \tableofcontents
@@ -365,31 +380,12 @@
   \addcontentsline{toc}{chapter}{List of Tables}
   \listoftables
   \cleardoublepage
-  \glsresetall
   %--- Nomenclature -----------------------------------------
-  \@oldchapter*{Nomenclature}
-  \addcontentsline{toc}{chapter}{Nomenclature}
-  \markboth{Nomenclature}{}
-  \section*{List of abbreviations}
-  \vspace{-1cm}
-  \renewcommand*{\glossarysection}[2][]{\section*{##2}}
-  \printglossary[type=\acronymtype, title={}, toctitle={}, style=long, nogroupskip, nonumberlist]
-  \section*{List of symbols}
-  \vspace{-1cm}
-  \printglossary[title={}, toctitle={}, style=long, nogroupskip, nonumberlist]
+  \unnumberedchapter{Nomenclature}
+  \printacronyms[heading=none]
   \cleardoublepage
+  \acresetall
   %--- Switch to main matter --------------------------------
   \pagenumbering{arabic}
   \pagestyle{mainmatter}
-}
-
-
-% ============================================================
-%  BACK MATTER MACRO  –– \makebackmatter
-% ============================================================
-\newcommand{\makebackmatter}{%
-  \unnumberedchapter{References}
-  \begin{refcontext}[sorting=nyt]
-    \printbibliography[heading=none]
-  \end{refcontext}
 }

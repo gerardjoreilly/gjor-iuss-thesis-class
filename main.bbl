@@ -1,0 +1,396 @@
+\begin{thebibliography}{53}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Silva et~al.(2014)Silva, Crowley, and Colombi]{Silva2014}
+Vitor Silva, Helen Crowley, and Miriam Colombi.
+\newblock \emph{Fragility Function Manager Tool}, pages 385--402.
+\newblock Springer Netherlands, 2014.
+\newblock \doi{10.1007/978-94-007-7872-6\_13}.
+
+\bibitem[O’Reilly and Calvi(2020)]{OReilly2020}
+Gerard~J. O’Reilly and Gian~Michele Calvi.
+\newblock Quantifying seismic risk in structures via simplified demand–intensity models.
+\newblock \emph{Bulletin of Earthquake Engineering}, 18:\penalty0 2003--2022, 3 2020.
+\newblock ISSN 1570-761X.
+\newblock \doi{10.1007/s10518-019-00776-0}.
+\newblock URL \url{http://link.springer.com/10.1007/s10518-019-00776-0}.
+
+\bibitem[O'Reilly et~al.(2026)O'Reilly, Ozsarac, and Shahnazaryan]{OReilly2026-ffconversion}
+Gerard~J. O'Reilly, Volkan Ozsarac, and Davit Shahnazaryan.
+\newblock Conversion of seismic fragility and vulnerability models to alternative intensity measures for regional risk analysis.
+\newblock \emph{Earthquake Spectra}, 2026.
+\newblock \doi{10.1002/esp4.70098}.
+
+\bibitem[Monteiro and O'Reilly(2026)]{MonteiroOReilly2026}
+Vitor~A. Monteiro and Gerard~J. O'Reilly.
+\newblock A review of ground motion correlation modelling for regional seismic risk analysis.
+\newblock \emph{Bulletin of Earthquake Engineering}, 2026.
+
+\bibitem[Weatherill et~al.(2015)Weatherill, Silva, Crowley, and Bazzurro]{Weatherill2015}
+G.~A. Weatherill, V.~Silva, H.~Crowley, and P.~Bazzurro.
+\newblock Exploring the impact of spatial correlations and uncertainties for portfolio analysis in probabilistic seismic loss estimation.
+\newblock \emph{Bulletin of Earthquake Engineering}, 13:\penalty0 957--981, 4 2015.
+\newblock ISSN 1570-761X.
+\newblock \doi{10.1007/s10518-015-9730-5}.
+
+\bibitem[Goda and Hong(2008)]{Goda2008}
+K.~Goda and H.~P. Hong.
+\newblock Spatial correlation of peak ground motions and response spectra.
+\newblock \emph{Bulletin of the Seismological Society of America}, 98:\penalty0 354--365, 2 2008.
+\newblock ISSN 0037-1106.
+\newblock \doi{10.1785/0120070078}.
+
+\bibitem[Franchin and Cavalieri(2015)]{Franchin2015}
+Paolo Franchin and Francesco Cavalieri.
+\newblock Probabilistic assessment of civil infrastructure resilience to earthquakes.
+\newblock \emph{Computer-Aided Civil and Infrastructure Engineering}, 30:\penalty0 583--600, 7 2015.
+\newblock ISSN 1093-9687.
+\newblock \doi{10.1111/mice.12092}.
+
+\bibitem[Esposito et~al.(2015)Esposito, Iervolino, d'Onofrio, Santo, Cavalieri, and Franchin]{Esposito2015}
+Simona Esposito, Iunio Iervolino, Anna d'Onofrio, Antonio Santo, Francesco Cavalieri, and Paolo Franchin.
+\newblock Simulation‐based seismic risk assessment of gas distribution networks.
+\newblock \emph{Computer-Aided Civil and Infrastructure Engineering}, 30:\penalty0 508--523, 7 2015.
+\newblock ISSN 1093-9687.
+\newblock \doi{10.1111/mice.12105}.
+
+\bibitem[Abarca et~al.(2022)Abarca, Monteiro, and O'Reilly]{Abarca2022a}
+Andres Abarca, Ricardo Monteiro, and Gerard~John O'Reilly.
+\newblock Simplified methodology for indirect loss–based prioritization in roadway bridge network risk assessment.
+\newblock \emph{International Journal of Disaster Risk Reduction}, 74:\penalty0 102948, 5 2022.
+\newblock ISSN 22124209.
+\newblock \doi{10.1016/j.ijdrr.2022.102948}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S2212420922001674}.
+
+\bibitem[Abarca et~al.(2025)Abarca, Monteiro, and O’Reilly]{Abarca2023}
+Andres Abarca, Ricardo Monteiro, and Gerard~J. O’Reilly.
+\newblock Seismic risk prioritisation schemes for reinforced concrete bridge portfolios.
+\newblock \emph{Structure and Infrastructure Engineering}, 21:\penalty0 49--69, 1 2025.
+\newblock ISSN 1573-2479.
+\newblock \doi{10.1080/15732479.2023.2187424}.
+\newblock URL \url{https://www.tandfonline.com/doi/full/10.1080/15732479.2023.2187424}.
+
+\bibitem[Heresi and Miranda(2022)]{Heresi2022}
+Pablo Heresi and Eduardo Miranda.
+\newblock Structure-to-structure damage correlation for scenario-based regional seismic risk assessment.
+\newblock \emph{Structural Safety}, 95:\penalty0 102155, 3 2022.
+\newblock ISSN 01674730.
+\newblock \doi{10.1016/j.strusafe.2021.102155}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0167473021000783}.
+
+\bibitem[Mejia and O'Reilly(2025)]{Mejia2025}
+Tomas Mejia and Gerard~J. O'Reilly.
+\newblock Quantifying the impacts of incorporating damage correlation on scenario‐based regional seismic assessment.
+\newblock \emph{Earthquake Engineering \& Structural Dynamics}, 9 2025.
+\newblock ISSN 0098-8847.
+\newblock \doi{10.1002/eqe.70069}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/10.1002/eqe.70069}.
+
+\bibitem[Rosti et~al.(2021)Rosti, Gaudio, Rota, Ricci, Ludovico, Penna, and Verderame]{Rosti2021}
+A.~Rosti, C.~Del Gaudio, M.~Rota, P.~Ricci, M.~Di Ludovico, A.~Penna, and G.~M. Verderame.
+\newblock Empirical fragility curves for italian residential rc buildings.
+\newblock \emph{Bulletin of Earthquake Engineering}, 19:\penalty0 3165--3183, 6 2021.
+\newblock ISSN 1570-761X.
+\newblock \doi{10.1007/s10518-020-00971-4}.
+\newblock URL \url{https://link.springer.com/10.1007/s10518-020-00971-4}.
+
+\bibitem[Shome et~al.(1998)Shome, Cornell, Bazzurro, and Carballo]{ShomeEtAl1998}
+Nilesh Shome, C.~Allin Cornell, Paolo Bazzurro, and J.~Eduardo Carballo.
+\newblock Earthquakes, records, and nonlinear responses.
+\newblock \emph{Earthquake Spectra}, 14\penalty0 (3):\penalty0 469--500, 1998.
+\newblock \doi{10.1193/1.1586011}.
+\newblock URL \url{https://doi.org/10.1193/1.1586011}.
+
+\bibitem[Mehdizadeh et~al.(2017)Mehdizadeh, Mackie, and Nielson]{MehdizadehEtAl2017}
+Mohammad Mehdizadeh, Kevin~R. Mackie, and Bryant~G. Nielson.
+\newblock Scaling bias and record selection for quantifying seismic structural demand.
+\newblock \emph{Journal of Structural Engineering}, 143\penalty0 (9):\penalty0 04017117, 2017.
+\newblock \doi{10.1061/(ASCE)ST.1943-541X.0001855}.
+\newblock URL \url{https://ascelibrary.org/doi/abs/10.1061/(ASCE)ST.1943-541X.0001855}.
+
+\bibitem[Ghimire et~al.(2021)Ghimire, Guéguen, and Astorga]{GhimireEtAl2021}
+Subash Ghimire, Philippe Guéguen, and Ariana Astorga.
+\newblock Analysis of the efficiency of intensity measures from real earthquake data recorded in buildings.
+\newblock \emph{Soil Dynamics and Earthquake Engineering}, 147:\penalty0 106751, 2021.
+\newblock ISSN 0267-7261.
+\newblock \doi{https://doi.org/10.1016/j.soildyn.2021.106751}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S0267726121001731}.
+
+\bibitem[O'Reilly(2021)]{OReilly2021}
+Gerard~J. O'Reilly.
+\newblock {Seismic intensity measures for risk assessment of bridges}.
+\newblock \emph{Bulletin of Earthquake Engineering}, 19\penalty0 (9), 2021.
+\newblock ISSN 15731456.
+\newblock \doi{10.1007/s10518-021-01114-z}.
+
+\bibitem[Martins and Silva(2021)]{Martins2021-BEE}
+Lu{\'{i}}s Martins and V{\'{i}}tor Silva.
+\newblock {Development of a fragility and vulnerability model for global seismic risk analyses}.
+\newblock \emph{Bulletin of Earthquake Engineering}, 19\penalty0 (15):\penalty0 6719--6745, dec 2021.
+\newblock ISSN 1570-761X.
+\newblock \doi{10.1007/s10518-020-00885-1}.
+\newblock URL \url{https://link.springer.com/10.1007/s10518-020-00885-1}.
+
+\bibitem[Crowley et~al.(2021)Crowley, Dabbeek, Despotaki, Rodrigues, Martins, Silva, Romão, Pereira, Weatherill, and Danciu]{ESRM20}
+H.~Crowley, J.~Dabbeek, V.~Despotaki, D.~Rodrigues, L.~Martins, V.~Silva, X.~Romão, N.~Pereira, G.~Weatherill, and L.~Danciu.
+\newblock European seismic risk model (esrm20).
+\newblock \emph{EFEHR Technical Report}, 002, 2021.
+\newblock \doi{10.7414/EUC-EFEHR-TR002-ESRM20}.
+\newblock URL \url{https://doi.org/10.7414/EUC-EFEHR-TR002-ESRM20}.
+
+\bibitem[Eads et~al.(2015)Eads, Miranda, and Lignos]{Eads2015}
+Laura Eads, Eduardo Miranda, and Dimitrios~G. Lignos.
+\newblock Average spectral acceleration as an intensity measure for collapse risk assessment.
+\newblock \emph{Earthquake Engineering {\&} Structural Dynamics}, 44\penalty0 (12):\penalty0 2057–2073, March 2015.
+\newblock ISSN 1096-9845.
+\newblock \doi{10.1002/eqe.2575}.
+\newblock URL \url{http://dx.doi.org/10.1002/eqe.2575}.
+
+\bibitem[Kazantzi and Vamvatsikos(2015)]{Kazantzi2015}
+Athanasia~K. Kazantzi and Dimitrios Vamvatsikos.
+\newblock {Intensity measure selection for vulnerability studies of building classes}.
+\newblock \emph{Earthquake Engineering {\&} Structural Dynamics}, 44\penalty0 (15):\penalty0 2677--2694, dec 2015.
+\newblock ISSN 00988847.
+\newblock \doi{10.1002/eqe.2603}.
+\newblock URL \url{http://doi.wiley.com/10.1002/eqe.2603}.
+
+\bibitem[Dávalos and Miranda(2019)]{Davalos2019}
+Héctor Dávalos and Eduardo Miranda.
+\newblock Filtered incremental velocity: A novel approach in intensity measures for seismic collapse estimation.
+\newblock \emph{Earthquake Engineering \& Structural Dynamics}, 48:\penalty0 1384--1405, 10 2019.
+\newblock ISSN 0098-8847.
+\newblock \doi{10.1002/eqe.3205}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/eqe.3205}.
+
+\bibitem[Monteiro et~al.(2026)Monteiro, Aristeidou, and O'Reilly]{Monteiro2026b}
+Vitor~A. Monteiro, Savvinos Aristeidou, and Gerard~J. O'Reilly.
+\newblock Spatial cross-correlation models for next-generation amplitude and cumulative intensity measures.
+\newblock \emph{Earthquake Spectra}, 2026.
+
+\bibitem[Suzuki and Iervolino(2020)]{Suzuki2020}
+Akiko Suzuki and Iunio Iervolino.
+\newblock {Intensity measure conversion of fragility curves}.
+\newblock \emph{Earthquake Engineering {\&} Structural Dynamics}, 49\penalty0 (6):\penalty0 607--629, may 2020.
+\newblock ISSN 0098-8847.
+\newblock \doi{10.1002/eqe.3256}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/10.1002/eqe.3256}.
+
+\bibitem[Pitilakis et~al.(2014)Pitilakis, Franchin, Khazai, and Wenzel]{Pitilakis2014}
+K.~Pitilakis, P.~Franchin, B.~Khazai, and H.~Wenzel.
+\newblock \emph{SYNER-G: Systemic Seismic Vulnerability and Risk Assessment of Complex Urban, Utility, Lifeline Systems and Critical Facilities}, volume~31.
+\newblock Springer Netherlands, 2014.
+\newblock ISBN 978-94-017-8834-2.
+\newblock \doi{10.1007/978-94-017-8835-9}.
+
+\bibitem[IBC(2006)]{IBC2006}
+IBC.
+\newblock International building code.
+\newblock Technical report, International Code Council, Falls Church, VA, 2006.
+
+\bibitem[Bradley(2012)]{Bradley2012a}
+Brendon~A. Bradley.
+\newblock The seismic demand hazard and importance of the conditioning intensity measure.
+\newblock \emph{Earthquake Engineering \& Structural Dynamics}, 41:\penalty0 1417--1437, 9 2012.
+\newblock ISSN 00988847.
+\newblock \doi{10.1002/eqe.2221}.
+\newblock URL \url{http://doi.wiley.com/10.1002/eqe.2221}.
+
+\bibitem[Lin et~al.(2013)Lin, Haselton, and Baker]{Lin2013_pt1}
+Ting Lin, Curt~B. Haselton, and Jack~W. Baker.
+\newblock {Conditional spectrum-based ground motion selection. Part I: Hazard consistency for risk-based assessments}.
+\newblock \emph{Earthquake Engineering {\&} Structural Dynamics}, 42\penalty0 (12):\penalty0 1847--1865, oct 2013.
+\newblock ISSN 00988847.
+\newblock \doi{10.1002/eqe.2301}.
+\newblock URL \url{http://doi.wiley.com/10.1002/eqe.2301}.
+
+\bibitem[Cornell et~al.(2002)Cornell, Jalayer, Hamburger, and Foutch]{Cornell2002}
+C.~Allin Cornell, Fatemeh Jalayer, Ronald~O. Hamburger, and Douglas~A. Foutch.
+\newblock Probabilistic basis for 2000 sac federal emergency management agency steel moment frame guidelines.
+\newblock \emph{Journal of Structural Engineering}, 128:\penalty0 526--533, 4 2002.
+\newblock ISSN 0733-9445.
+\newblock \doi{10.1061/(ASCE)0733-9445(2002)128:4(526)}.
+\newblock NULL.
+
+\bibitem[Vamvatsikos(2013)]{Vamvatsikos2013}
+Dimitrios Vamvatsikos.
+\newblock Derivation of new sac/fema performance evaluation solutions with second-order hazard approximation.
+\newblock \emph{Earthquake Engineering \& Structural Dynamics}, 42:\penalty0 1171--1188, 7 2013.
+\newblock ISSN 00988847.
+\newblock \doi{10.1002/eqe.2265}.
+\newblock URL \url{http://doi.wiley.com/10.1002/eqe.2265}.
+\newblock NULL.
+
+\bibitem[Karaferis and Vamvatsikos(2022)]{KaraferisVamvatsikos2022}
+Nikolaos~D. Karaferis and Dimitrios Vamvatsikos.
+\newblock Intensity measure transformation of fragility curves for 2d buildings using simplified models.
+\newblock In \emph{Proceedings of the 3rd European Conference on Earthquake Engineering \& Seismology (3ECEES)}, Bucharest, Romania, 2022.
+\newblock \doi{10.5281/zenodo.15342810}.
+\newblock Available at: https://lambdalab.ntua.gr/docs/conferences/Karaferis\_Vamvatsikos\_3ECEES.pdf.
+
+\bibitem[Michel et~al.(2018)Michel, Crowley, Hannewald, Lestuzzi, and Fah]{Michel2018}
+Clotaire Michel, Helen Crowley, Pia Hannewald, Pierino Lestuzzi, and Donat Fah.
+\newblock Deriving fragility functions from bilinearized capacity curves for earthquake scenario modelling using the conditional spectrum.
+\newblock \emph{Bulletin of Earthquake Engineering}, 16\penalty0 (10):\penalty0 4639--4660, oct 2018.
+\newblock ISSN 1570-761X.
+\newblock \doi{10.1007/s10518-018-0371-3}.
+\newblock URL \url{http://link.springer.com/10.1007/s10518-018-0371-3}.
+
+\bibitem[Bradley(2010)]{Bradley2010a}
+Brendon~A Bradley.
+\newblock {A generalized conditional intensity measure approach and holistic ground-motion selection}.
+\newblock \emph{Earthquake Engineering {\&} Structural Dynamics}, 39\penalty0 (2):\penalty0 1321--1342, 2010.
+\newblock \doi{10.1002/eqe.995}.
+
+\bibitem[Luco and Cornell(2007)]{Luco2007a}
+Nicolas Luco and C.~Allin Cornell.
+\newblock {Structure-Specific Scalar Intensity Measures for Near-Source and Ordinary Earthquake Ground Motions}.
+\newblock \emph{Earthquake Spectra}, 23\penalty0 (2):\penalty0 357--392, may 2007.
+\newblock ISSN 8755-2930.
+\newblock \doi{10.1193/1.2723158}.
+\newblock URL \url{http://earthquakespectra.org/doi/10.1193/1.2723158}.
+
+\bibitem[Fox et~al.(2016)Fox, Stafford, and Sullivan]{Fox2016}
+Matthew~J. Fox, Peter~J. Stafford, and Timothy~J. Sullivan.
+\newblock {Seismic hazard disaggregation in performance-based earthquake engineering: occurrence or exceedance?}
+\newblock \emph{Earthquake Engineering {\&} Structural Dynamics}, 45\penalty0 (5):\penalty0 835--842, apr 2016.
+\newblock ISSN 00988847.
+\newblock \doi{10.1002/eqe.2675}.
+\newblock URL \url{http://onlinelibrary.wiley.com/doi/10.1002/eqe.2230/full http://doi.wiley.com/10.1002/eqe.2675}.
+
+\bibitem[Pagani et~al.(2014)Pagani, Monelli, Weatherill, Danciu, Crowley, Silva, Henshaw, Butler, Nastasi, Panzeri, Simionato, and Vigano]{pagani2014}
+M.~Pagani, D.~Monelli, G.~Weatherill, L.~Danciu, H.~Crowley, V.~Silva, P.~Henshaw, L.~Butler, M.~Nastasi, L.~Panzeri, M.~Simionato, and D.~Vigano.
+\newblock Openquake engine: An open hazard (and risk) software for the global earthquake model.
+\newblock \emph{Seismological Research Letters}, 85\penalty0 (3):\penalty0 692--702, 05 2014.
+\newblock ISSN 0895-0695.
+\newblock \doi{10.1785/0220130087}.
+\newblock URL \url{https://doi.org/10.1785/0220130087}.
+
+\bibitem[Baker and Bradley(2017)]{Baker2017}
+Jack~W. Baker and Brendon~A. Bradley.
+\newblock Intensity measure correlations observed in the nga-west2 database, and dependence of correlations on rupture and site parameters.
+\newblock \emph{Earthquake Spectra}, 33:\penalty0 145--156, 2 2017.
+\newblock ISSN 8755-2930.
+\newblock \doi{10.1193/060716eqs095m}.
+\newblock URL \url{http://journals.sagepub.com/doi/10.1193/060716eqs095m}.
+
+\bibitem[Aristeidou et~al.(2025)Aristeidou, Shahnazaryan, and O’Reilly]{Aristeidou2025}
+Savvinos Aristeidou, Davit Shahnazaryan, and Gerard~J O’Reilly.
+\newblock Correlation models for next-generation amplitude and cumulative intensity measures using artificial neural networks.
+\newblock \emph{Earthquake Spectra}, 41\penalty0 (1):\penalty0 851--875, 2025.
+\newblock \doi{10.1177/87552930241270563}.
+\newblock URL \url{https://doi.org/10.1177/87552930241270563}.
+
+\bibitem[Shahnazaryan and O’Reilly(2024)]{Shahnazaryan2024}
+Davit Shahnazaryan and Gerard~J. O’Reilly.
+\newblock Next-generation non-linear and collapse prediction models for short- to long-period systems via machine learning methods.
+\newblock \emph{Engineering Structures}, 306:\penalty0 117801, 5 2024.
+\newblock ISSN 01410296.
+\newblock \doi{10.1016/j.engstruct.2024.117801}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0141029624003638}.
+
+\bibitem[Hellinger(1909)]{Hellinger1909}
+E.~Hellinger.
+\newblock Neue begründung der theorie quadratischer formen von unendlichvielen veränderlichen (in german).
+\newblock \emph{Journal für die reine und angewandte Mathematik}, 1909:\penalty0 210--271, 7 1909.
+\newblock ISSN 1435-5345.
+\newblock \doi{10.1515/crll.1909.136.210}.
+
+\bibitem[O’Reilly and Shahnazaryan(2024)]{oreilly-shahnazaryan-2024}
+Gerard~J O’Reilly and Davit Shahnazaryan.
+\newblock On the utility of story loss functions for regional seismic vulnerability modeling and risk assessment.
+\newblock \emph{Earthquake Spectra}, 40\penalty0 (3):\penalty0 1933--1955, 2024.
+\newblock \doi{10.1177/87552930241245940}.
+\newblock URL \url{https://doi.org/10.1177/87552930241245940}.
+
+\bibitem[Meletti et~al.(2008)Meletti, Galadini, Valensise, Stucchi, Basili, Barba, Vannucci, and Boschi]{MelettiEtAl2008}
+Carlo Meletti, Fabrizio Galadini, Gianluca Valensise, Massimiliano Stucchi, Roberto Basili, Salvatore Barba, Gianfranco Vannucci, and Enzo Boschi.
+\newblock A seismic source zone model for the seismic hazard assessment of the italian territory.
+\newblock \emph{Tectonophysics}, 450\penalty0 (1):\penalty0 85--108, 2008.
+\newblock ISSN 0040-1951.
+\newblock \doi{https://doi.org/10.1016/j.tecto.2008.01.003}.
+
+\bibitem[Stucchi et~al.(2009)Stucchi, Albini, Mirto, and Rebez]{MStucchi2009}
+M.~Stucchi, P.~Albini, M.~Mirto, and A.~Rebez.
+\newblock Assessing the completeness of italian historical earthquake data.
+\newblock \emph{Annals of Geophysics}, 47\penalty0 (2–3), December 2009.
+\newblock ISSN 1593-5213.
+\newblock \doi{10.4401/ag-3330}.
+\newblock URL \url{http://dx.doi.org/10.4401/ag-3330}.
+
+\bibitem[Stucchi et~al.(2011)Stucchi, Meletti, Montaldo, Crowley, Calvi, and Boschi]{StucchiEtAl2011}
+Massimiliano Stucchi, Carlo Meletti, Valentina Montaldo, Helen Crowley, Gian~Michele Calvi, and Enzo Boschi.
+\newblock Seismic hazard assessment (2003–2009) for the italian building code.
+\newblock \emph{Bulletin of the Seismological Society of America}, 101\penalty0 (4):\penalty0 1885--1911, 08 2011.
+\newblock ISSN 0037-1106.
+\newblock \doi{https://doi.org/10.1785/0120100130}.
+
+\bibitem[Aristeidou et~al.(2024)Aristeidou, Shahnazaryan, and O'Reilly]{AristeidouEtAl2024_gmm}
+Savvinos Aristeidou, Davit Shahnazaryan, and Gerard~J. O'Reilly.
+\newblock Artificial neural network-based ground motion model for next-generation seismic intensity measures.
+\newblock \emph{Soil Dynamics and Earthquake Engineering}, 184:\penalty0 108851, 2024.
+\newblock ISSN 0267-7261.
+\newblock \doi{https://doi.org/10.1016/j.soildyn.2024.108851}.
+
+\bibitem[Ancheta et~al.(2014)Ancheta, Darragh, Stewart, Seyhan, Silva, Chiou, Wooddell, Graves, Kottke, Boore, Kishida, and Donahue]{Ancheta2014}
+Timothy~D. Ancheta, Robert~B. Darragh, Jonathan~P. Stewart, Emel Seyhan, Walter~J. Silva, Brian S.-J. Chiou, Katie~E. Wooddell, Robert~W. Graves, Albert~R. Kottke, David~M. Boore, Tadahiro Kishida, and Jennifer~L. Donahue.
+\newblock Nga-west2 database.
+\newblock \emph{Earthquake Spectra}, 30\penalty0 (3):\penalty0 989–1005, August 2014.
+\newblock ISSN 1944-8201.
+\newblock \doi{10.1193/070913eqs197m}.
+\newblock URL \url{http://dx.doi.org/10.1193/070913EQS197M}.
+
+\bibitem[Shahnazaryan et~al.(2025)Shahnazaryan, Ozsarac, and O'Reilly]{Shahnazaryan2025}
+Davit Shahnazaryan, Volkan Ozsarac, and Gerard~John O'Reilly.
+\newblock Djura ground motion record selector: A software solution for earthquake engineering.
+\newblock In \emph{COMPDYN 2025- 10th ECCOMAS Thematic Conference on Computational Methods in Structural Dynamics and Earthquake Engineering}, 2025.
+
+\bibitem[Dávalos and Miranda(2020)]{Davalos2020}
+Héctor Dávalos and Eduardo Miranda.
+\newblock Evaluation of fiv3 as an intensity measure for collapse estimation of moment-resisting frame buildings.
+\newblock \emph{Journal of Structural Engineering}, 146:\penalty0 04020204, 10 2020.
+\newblock ISSN 0733-9445.
+\newblock \doi{10.1061/(ASCE)ST.1943-541X.0002781}.
+
+\bibitem[Dávalos and Miranda(2021)]{Dvalos2021}
+Héctor Dávalos and Eduardo Miranda.
+\newblock Robustness evaluation of fiv3 using near-fault pulse-like ground motions.
+\newblock \emph{Engineering Structures}, 230:\penalty0 111694, 3 2021.
+\newblock ISSN 01410296.
+\newblock \doi{10.1016/j.engstruct.2020.111694}.
+
+\bibitem[Aristeidou and O’Reilly(2024)]{Aristeidou2024}
+Savvinos Aristeidou and G.~J. O’Reilly.
+\newblock Exploring the use of orientation-independent inelastic spectral displacements in the seismic assessment of bridges.
+\newblock \emph{Journal of Earthquake Engineering}, 28:\penalty0 3515--3538, 9 2024.
+\newblock ISSN 1363-2469.
+\newblock \doi{10.1080/13632469.2024.2343067}.
+\newblock URL \url{https://www.tandfonline.com/doi/full/10.1080/13632469.2024.2343067}.
+
+\bibitem[Montemayor et~al.(2025)Montemayor, Miranda, and Dávalos]{Montemayor2025}
+Diego Montemayor, Eduardo Miranda, and Héctor Dávalos.
+\newblock Evaluation of the effects of ground motion duration on structural collapse.
+\newblock \emph{Earthquake Engineering and Structural Dynamics}, 54:\penalty0 2727--2747, 9 2025.
+\newblock ISSN 10969845.
+\newblock \doi{10.1002/eqe.4385}.
+
+\bibitem[Montemayor et~al.(2026)Montemayor, Miranda, and Dávalos]{Montemayor2026}
+Diego Montemayor, Eduardo Miranda, and Héctor Dávalos.
+\newblock Evaluation of the adjustment of the collapse capacity by epsilon in the fema p‐695 methodology.
+\newblock \emph{Earthquake Engineering \& Structural Dynamics}, 3 2026.
+\newblock ISSN 0098-8847.
+\newblock \doi{10.1002/eqe.70169}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/10.1002/eqe.70169}.
+
+\bibitem[Kohrangi et~al.(2017)Kohrangi, Vamvatsikos, and Bazzurro]{Kohrangi2017a}
+Mohsen Kohrangi, Dimitrios Vamvatsikos, and Paolo Bazzurro.
+\newblock Site dependence and record selection schemes for building fragility and regional loss assessment.
+\newblock \emph{Earthquake Engineering \& Structural Dynamics}, 46:\penalty0 1625--1643, 8 2017.
+\newblock ISSN 00988847.
+\newblock \doi{10.1002/eqe.2873}.
+\newblock URL \url{http://doi.wiley.com/10.1002/eqe.2873}.
+
+\end{thebibliography}
