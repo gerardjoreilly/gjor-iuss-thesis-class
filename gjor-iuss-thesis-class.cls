@@ -284,6 +284,20 @@
 \acsetup{templates/colspec = {l@{\hspace{1.5em}}p{.8\linewidth}}}
 
 % ============================================================
+%  LIST OF SYMBOLS  (docs/symbols.tex, optional)
+%  \begin{symbollist} ... \end{symbollist}  – two-column longtable
+%  \symbolgroup{Heading}                    – optional group heading
+% ============================================================
+\newenvironment{symbollist}{%
+  \setlength{\LTpre}{6pt}%
+  \setlength{\LTpost}{6pt}%
+  \longtable{>{\raggedright\arraybackslash}p{.26\linewidth}@{\hspace{1.5em}}%
+             >{\raggedright\arraybackslash}p{.66\linewidth}}%
+}{\endlongtable}
+\newcommand{\symbolgroup}[1]{%
+  \multicolumn{2}{@{}l}{\textbf{#1}}\\[3pt]}
+
+% ============================================================
 %  ARRAY STRETCH
 % ============================================================
 \renewcommand{\arraystretch}{1.2}
@@ -382,7 +396,10 @@
   \cleardoublepage
   %--- Nomenclature -----------------------------------------
   \unnumberedchapter{Nomenclature}
+  \section*{List of Acronyms}
   \printacronyms[heading=none]
+  \section*{List of Symbols}
+  \input{docs/symbols}
   \cleardoublepage
   \acresetall
   %--- Switch to main matter --------------------------------

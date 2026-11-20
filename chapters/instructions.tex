@@ -22,7 +22,7 @@ Copy the following folder structure to your own local project and maintain it th
   \item \texttt{chapters/} — one \texttt{.tex} file per chapter of the thesis
   \item \texttt{appendices/} — one \texttt{.tex} file per appendix
   \item \texttt{figs/} — all figures, organised into subfolders if desired (e.g.\ \texttt{figs/ch1/}, \texttt{figs/ch2/})
-  \item \texttt{docs/} — supporting documents: \texttt{abstract.tex}, \texttt{sommario.tex}, \texttt{acknowledgements.tex} (optional), \texttt{acronyms.tex}, \texttt{references.bib}, and the IUSS logo
+  \item \texttt{docs/} — supporting documents: \texttt{abstract.tex}, \texttt{sommario.tex}, \texttt{acknowledgements.tex} (optional), \texttt{acronyms.tex}, \texttt{symbols.tex} and \texttt{references.bib}
 \end{itemize}
 
 All figures should be referenced relative to \texttt{figs/} (e.g.\ \verb|\includegraphics{ch1/myfig.pdf}|), since \verb|\graphicspath{{figs/}}| is set globally by the class.
@@ -95,9 +95,13 @@ The work presented in this chapter has been published in:
 The class automatically suppresses article-only commands (\verb|\maketitle|, \verb|\makeabstract|, \verb|\affil|, etc.) when a file is included through \verb|\addchapter| or \verb|\addappendix|, but a plain \verb|\input| does not suppress them, so the preamble must be removed manually.
 
 
-\section{Acronyms and nomenclature}
+\section{Nomenclature: acronyms and symbols}
 
-All acronyms and symbols are defined centrally in \texttt{docs/acronyms.tex} using the \texttt{acro} package:
+The Nomenclature at the front of the thesis has two parts: a list of acronyms, generated from \texttt{docs/acronyms.tex}, and a list of symbols, typeset from \texttt{docs/symbols.tex}.
+
+\subsection{Acronyms}
+
+All acronyms are defined centrally in \texttt{docs/acronyms.tex} using the \texttt{acro} package:
 
 \begin{verbatim}
 \DeclareAcronym{PGA}{
@@ -106,9 +110,32 @@ All acronyms and symbols are defined centrally in \texttt{docs/acronyms.tex} usi
 }
 \end{verbatim}
 
-Use \verb|\ac{PGA}| for the first occurrence (prints full name with abbreviation) and subsequent uses (prints abbreviation only), \verb|\acp{PGA}| for the plural form. The Nomenclature section at the front of the thesis is generated automatically from all declared acronyms.
+Use \verb|\ac{PGA}| for the first occurrence (prints full name with abbreviation) and subsequent uses (prints abbreviation only), \verb|\acp{PGA}| for the plural form. The list of acronyms in the Nomenclature is generated automatically from all declared acronyms.
 
 New acronyms should always be added to the central file rather than defined locally in a chapter. If a chapter file was previously standalone and contains its own \verb|\DeclareAcronym| calls, those are automatically suppressed when included in the thesis to avoid redefinition errors.
+
+\subsection{Symbols}
+
+Mathematical symbols are listed in \texttt{docs/symbols.tex}, which is printed after the acronyms. Unlike acronyms, symbols are not declared and called with a command: the file is simply a table, written with the \texttt{symbollist} environment provided by the class. Each line holds the symbol in math mode, an \verb|&|, and its description. Symbols can be grouped by topic with \verb|\symbolgroup{...}|, and ending the last entry of a group with \verb|\\[9pt]| leaves a small gap before the next group:
+
+\begin{verbatim}
+\begin{symbollist}
+\symbolgroup{Ground motion and hazard}
+$Sa(T)$          & spectral acceleration at period $T$ \\
+$a_g(t)$         & ground motion time-history as a function of time $t$ \\
+$H(IM > im)$     & hazard curve, the mean annual frequency of
+                   exceeding intensity $im$ \\[9pt]
+
+\symbolgroup{Structural response and demand}
+$\xi$            & damping ratio \\[9pt]
+
+\symbolgroup{Fragility and risk}
+$\eta$, $\beta$  & median and logarithmic dispersion of a
+                   fragility function \\
+\end{symbollist}
+\end{verbatim}
+
+Groups are optional, and a short list can simply be written without them. A short paragraph before the table can explain general conventions, such as what a subscript denotes, which code's notation is followed, or how to read a symbol that has more than one meaning in the thesis. Symbols used across several chapters should keep the same meaning throughout; where this is not possible, say so in the list.
 
 
 \section{Bibliography}
