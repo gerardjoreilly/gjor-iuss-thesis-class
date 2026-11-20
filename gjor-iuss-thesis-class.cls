@@ -255,7 +255,7 @@
 % ============================================================
 %  BIBLIOGRAPHY
 % ============================================================
-\RequirePackage[numbers]{natbib}
+\RequirePackage{natbib}
 \renewcommand{\bibsep}{0pt}
 \RequirePackage{bibentry}
 \nobibliography*
