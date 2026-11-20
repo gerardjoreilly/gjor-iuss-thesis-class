@@ -331,7 +331,7 @@
   %--- Title page -------------------------------------------
   \begin{titlepage}
     \centering
-    \includegraphics[width=0.6\textwidth]{figs/logo-iuss.pdf}\par
+    \includegraphics[width=0.5\textwidth]{figs/logo-iuss-2026.png}\par
     \vspace{0cm}
     {\textbf{\ThesisInstitution}\par}
     \vspace{1cm}
