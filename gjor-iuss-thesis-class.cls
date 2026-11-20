@@ -335,7 +335,7 @@
     \vspace{0cm}
     {\textbf{\ThesisInstitution}\par}
     \vspace{1cm}
-    {\setstretch{1.3}\LARGE\bfseries \ThesisTitle \par}
+    {\setstretch{1.3}\LARGE\bfseries \MakeUppercase{\ThesisTitle}\par}
     \vspace{1cm}
     {\setstretch{1.2}\large
       A Thesis Submitted in Partial Fulfilment of the Requirements\\
