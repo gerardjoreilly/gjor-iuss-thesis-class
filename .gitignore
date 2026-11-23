@@ -9,3 +9,6 @@ main.blg
 main.bbl
 main.aux
 .DS_Store
+main.synctex.gz
+main.synctex.gz
+*.gz
