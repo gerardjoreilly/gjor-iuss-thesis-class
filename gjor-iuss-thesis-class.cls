@@ -112,8 +112,14 @@
 \setlength{\abovecaptionskip}{5pt}
 \setlength{\belowcaptionskip}{0pt}
 
-\renewcommand{\floatpagefraction}{0.8}
-\renewcommand{\textfraction}{0.1}
+% Float placement: allow large floats near their first reference instead
+% of drifting to the end of the chapter
+\renewcommand{\topfraction}{0.85}      % max fraction of a page for top floats
+\renewcommand{\bottomfraction}{0.6}    % max fraction of a page for bottom floats
+\renewcommand{\textfraction}{0.1}      % min fraction of a page for text
+\renewcommand{\floatpagefraction}{0.7} % min fill of a float-only page
+\setcounter{topnumber}{3}              % max floats at the top of a page
+\setcounter{totalnumber}{4}            % max floats on a page
 
 
 % ============================================================
@@ -278,10 +284,12 @@
 % ============================================================
 \RequirePackage{acro}
 \acsetup{
-  list / display  = all ,
+  list / display  = used ,   % list only acronyms used in the text
   list / template = longtable ,
 }
-\acsetup{templates/colspec = {l@{\hspace{1.5em}}p{.8\linewidth}}}
+% Fixed-width first column so long labels (e.g. LATBSDC) wrap instead of
+% pushing the table into the margin
+\acsetup{templates/colspec = {>{\raggedright\arraybackslash}p{.15\linewidth}@{\hspace{1.5em}}p{.76\linewidth}}}
 
 % ============================================================
 %  LIST OF SYMBOLS  (docs/symbols.tex, optional)
@@ -289,6 +297,8 @@
 %  \symbolgroup{Heading}                    – optional group heading
 % ============================================================
 \newenvironment{symbollist}{%
+  % Unique hyperref anchors for the captionless longtable
+  \def\theHtable{notation.\arabic{table}}%
   \setlength{\LTpre}{6pt}%
   \setlength{\LTpost}{6pt}%
   \longtable{>{\raggedright\arraybackslash}p{.26\linewidth}@{\hspace{1.5em}}%
@@ -379,6 +389,12 @@
   \IfFileExists{docs/acknowledgements.tex}{%
     \unnumberedchapter{Acknowledgements}%
     \input{docs/acknowledgements}%
+    \cleardoublepage
+  }{}
+  %--- Declaration on the use of AI tools (optional) --------
+  \IfFileExists{docs/ai_disclosure.tex}{%
+    \unnumberedchapter{Declaration on the Use of AI Tools}%
+    \input{docs/ai_disclosure}%
     \cleardoublepage
   }{}
   %--- ToC / LoF / LoT --------------------------------------

@@ -24,7 +24,7 @@ Copy the following folder structure to your own local project and maintain it th
   \item \texttt{chapters/} — one \texttt{.tex} file per chapter of the thesis
   \item \texttt{appendices/} — one \texttt{.tex} file per appendix
   \item \texttt{figs/} — all figures, organised into subfolders if desired (e.g.\ \texttt{figs/ch1/}, \texttt{figs/ch2/})
-  \item \texttt{docs/} — supporting documents: \texttt{abstract.tex}, \texttt{sommario.tex}, \texttt{acknowledgements.tex} (optional), \texttt{acronyms.tex}, \texttt{symbols.tex} and \texttt{references.bib}
+  \item \texttt{docs/} — supporting documents: \texttt{abstract.tex}, \texttt{sommario.tex}, \texttt{acknowledgements.tex} (optional), \texttt{ai\_disclosure.tex} (optional), \texttt{acronyms.tex}, \texttt{symbols.tex} and \texttt{references.bib}
 \end{itemize}
 
 All figures should be referenced relative to \texttt{figs/} (e.g.\ \verb|\includegraphics{ch1/myfig.pdf}|), since \verb|\graphicspath{{figs/}}| is set globally by the class.
@@ -112,7 +112,7 @@ All acronyms are defined centrally in \texttt{docs/acronyms.tex} using the \text
 }
 \end{verbatim}
 
-Use \verb|\ac{PGA}| for the first occurrence (prints full name with abbreviation) and subsequent uses (prints abbreviation only), \verb|\acp{PGA}| for the plural form. The list of acronyms in the Nomenclature is generated automatically from all declared acronyms.
+Use \verb|\ac{PGA}| for the first occurrence (prints full name with abbreviation) and subsequent uses (prints abbreviation only), \verb|\acp{PGA}| for the plural form. The list of acronyms in the Nomenclature is generated automatically and contains only the acronyms actually used in the text, so acronyms declared in \texttt{docs/acronyms.tex} but never cited do not appear. Long labels wrap within the first column of the list rather than running into the margin.
 
 New acronyms should always be added to the central file rather than defined locally in a chapter. If a chapter file was previously standalone and contains its own \verb|\DeclareAcronym| calls, those are automatically suppressed when included in the thesis to avoid redefinition errors.
 
@@ -150,6 +150,16 @@ All references are stored in a single \texttt{.bib} file at \texttt{docs/referen
 \end{verbatim}
 
 Use \verb|\citep{key}| for parenthetical citations and \verb|\citet{key}| for text citations (e.g.\ \citet{Suzuki2020} showed that \ldots). When converting chapters from standalone papers, merge all \texttt{.bib} entries into \texttt{docs/references.bib} and check for duplicate keys or conflicting entries.
+
+
+\section{Declaration on the use of AI tools}
+
+Section 8 of the IUSS guidelines requires the use of artificial intelligence tools in preparing the thesis to be declared. Write the declaration in \texttt{docs/ai\_disclosure.tex}: if the file exists, the class prints it in the front matter, after the acknowledgements, as an unnumbered chapter titled \emph{Declaration on the Use of AI Tools}. State which tools were used, for which tasks, and that the output was checked by the author. If no AI tools were used, delete the file and the chapter is omitted.
+
+
+\section{Figures and float placement}
+
+The class relaxes the default \LaTeX\ float placement rules so that large figures and tables stay close to where they are first referenced, rather than drifting to the end of the chapter. A float may take up to 85\% of the top of a page (\verb|\topfraction|) or 60\% of the bottom (\verb|\bottomfraction|), a page containing only floats needs to be at least 70\% full (\verb|\floatpagefraction|), and up to three floats at the top and four in total can be placed on one page. These settings should not need to be changed in \texttt{main.tex}.
 
 
 \section{Appendices}
