@@ -16,6 +16,8 @@ The thesis is built on the \texttt{gjor-iuss-thesis-class} class file. \textbf{D
 
 Keeping a live reference to the source means that any bug fixes or improvements made centrally are automatically available to all users on their next update. To use the class, place the \texttt{gjor-iuss-thesis-class.cls} file in the root of your project (downloaded or linked from the repository) and keep it up to date.
 
+The class already loads the packages commonly needed in a thesis, including \texttt{hyperref} (blue links), \texttt{doi} (clickable DOIs in the bibliography), \texttt{graphicx}, \texttt{subcaption}, \texttt{booktabs}, \texttt{longtable}, \texttt{lscape} and \texttt{rotating} (\texttt{sidewaysfigure} and \texttt{sidewaystable}). Do not load these again in \texttt{main.tex}: at best this has no effect, and loading \texttt{hyperref} with different options causes an ``Option clash'' error. If you need a package that is not provided, load it with \verb|\usepackage| in the preamble of \texttt{main.tex}; if it would be useful to others, suggest adding it to the class.
+
 \subsection{Folder structure}
 
 Copy the following folder structure to your own local project and maintain it throughout:

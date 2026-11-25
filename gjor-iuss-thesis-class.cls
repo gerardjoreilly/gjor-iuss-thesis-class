@@ -106,6 +106,7 @@
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{lscape}
+\RequirePackage{rotating}   % sidewaysfigure / sidewaystable
 \RequirePackage{placeins}
 
 \captionsetup{font=small, labelfont=bf, labelsep=period, format=hang}
@@ -247,6 +248,7 @@
   pdfborder  = {0 0 0},
 ]{hyperref}
 \RequirePackage{bookmark}
+\RequirePackage{doi}        % clickable DOIs in the bibliography (after hyperref)
 
 \AtBeginDocument{%
   \hypersetup{
